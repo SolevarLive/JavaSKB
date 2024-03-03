@@ -1,4 +1,4 @@
-package org.example.Servis;
+package org.example.Service;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class SchoolInterface {
+public class SchoolInterfaceService {
     final SchoolMember teacher;
     final SchoolMember student;
 
     @Autowired
-    public SchoolInterface(@Qualifier("teacher") SchoolMember teacher,
-                           @Qualifier("student") SchoolMember student ){
+    public SchoolInterfaceService(@Qualifier("teacher") SchoolMember teacher,
+                                  @Qualifier("student") SchoolMember student ){
         this.teacher = teacher;
         this.student = student;
     }

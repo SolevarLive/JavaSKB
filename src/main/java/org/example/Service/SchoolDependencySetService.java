@@ -1,4 +1,4 @@
-package org.example.Servis;
+package org.example.Service;
 
 import org.example.School.SchoolMember;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,13 +7,17 @@ import org.example.participants.Student;
 import org.example.participants.Teacher;
 
 @Component
-public class SchoolDependencyСonstructor {
+public class SchoolDependencySetService {
     private SchoolMember teacher;
     private SchoolMember student;
 
     @Autowired
-    public SchoolDependencyСonstructor(Teacher teacher, Student student){
+    public void setTeacher(Teacher teacher){
         this.teacher = teacher;
+    }
+
+    @Autowired
+    public void SetStudent(Student student){
         this.student = student;
     }
 }

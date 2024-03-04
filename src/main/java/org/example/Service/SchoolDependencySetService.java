@@ -17,7 +17,7 @@ public class SchoolDependencySetService {
     }
 
     @Autowired
-    public void SetStudent(Student student){
+    public void setStudent(Student student){
         this.student = student;
     }
 }

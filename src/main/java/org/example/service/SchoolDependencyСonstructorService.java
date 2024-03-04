@@ -1,6 +1,6 @@
-package org.example.Service;
+package org.example.service;
 
-import org.example.School.SchoolMember;
+import org.example.school.SchoolMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.example.participants.Student;
@@ -11,7 +11,7 @@ public class SchoolDependencyСonstructorService {
     private SchoolMember teacher;
     private SchoolMember student;
 
-    @Autowired
+
     public SchoolDependencyСonstructorService(Teacher teacher, Student student){
         this.teacher = teacher;
         this.student = student;

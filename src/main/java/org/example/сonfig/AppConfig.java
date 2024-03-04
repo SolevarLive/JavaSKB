@@ -1,6 +1,6 @@
-package org.example.Config;
+package org.example.сonfig;
 
-import org.example.School.SchoolMember;
+import org.example.school.SchoolMember;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.example.participants.Student;

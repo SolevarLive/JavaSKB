@@ -4,7 +4,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import org.example.School.SchoolMember;
+import org.example.school.SchoolMember;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Student implements SchoolMember {

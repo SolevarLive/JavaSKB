@@ -1,8 +1,8 @@
-package org.example.Service;
+package org.example.service;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import org.example.School.SchoolMember;
+import org.example.school.SchoolMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 

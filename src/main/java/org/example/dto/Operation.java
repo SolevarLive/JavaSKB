@@ -4,7 +4,7 @@ package org.example.dto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.experimental.FieldDefaults;
+import org.example.common.Info;
 
 @Getter
 @Setter

@@ -1,7 +1,6 @@
-package org.example.exception;
+package org.example.errors;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public class CustomException extends RuntimeException{

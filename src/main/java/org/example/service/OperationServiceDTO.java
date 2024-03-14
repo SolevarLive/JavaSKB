@@ -16,14 +16,7 @@ public class OperationServiceDTO {
     List<Operation> operationList = new CopyOnWriteArrayList<>();
 
     public void operations(Operation operation) {
-        //Operation newOperation = new Operation();
-        //Info newInfo = new Info();
-        //newInfo.setId(generateUniqueId());
-        //newOperation.setInfo(newInfo);
-        //operationList.add(newOperation);
-        Operation newOperation = new Operation();
-        newOperation.setPrice(operation.getPrice());
-        newOperation.setInfo(operation.getInfo());
+        Operation newOperation = new Operation(operation);
         newOperation.getInfo().setId(generateUniqueId());
         operationList.add(newOperation);
     }

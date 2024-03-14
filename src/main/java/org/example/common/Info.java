@@ -9,5 +9,4 @@ public class Info {
     private int id;
 
     private String date;
-
 }

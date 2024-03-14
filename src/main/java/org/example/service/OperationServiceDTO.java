@@ -1,17 +1,28 @@
 package org.example.service;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.example.common.Info;
 import org.example.dto.Operation;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.List;
 
 @Service
 public class OperationServiceDTO {
-    List<Operation> operationList = new ArrayList<>();
+
+    @Getter
+    List<Operation> operationList = new CopyOnWriteArrayList<>();
 
     public void operations(Operation operation) {
+        //Operation newOperation = new Operation();
+        //Info newInfo = new Info();
+        //newInfo.setId(generateUniqueId());
+        //newOperation.setInfo(newInfo);
+        //operationList.add(newOperation);
         Operation newOperation = new Operation();
+        newOperation.setPrice(operation.getPrice());
         newOperation.setInfo(operation.getInfo());
         newOperation.getInfo().setId(generateUniqueId());
         operationList.add(newOperation);

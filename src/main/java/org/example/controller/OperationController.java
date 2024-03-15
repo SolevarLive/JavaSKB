@@ -17,6 +17,6 @@ public class OperationController {
     @PostMapping("/opra")
     public Operation processJson(@RequestBody Operation operation) {
         operationServiceDTO.operations(operation);
-        return  operationServiceDTO.getOperationList().get(0);
+        return  operationServiceDTO.getOperationList().getLast();
     }
 }

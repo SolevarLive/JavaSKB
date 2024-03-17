@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.example.common.Info;
-import org.example.validation.MaxAndPositive;
+import org.example.validation.MaxAndNotNull;
 import org.example.validation.OperationValidation;
 
 @Getter
@@ -14,7 +14,7 @@ import org.example.validation.OperationValidation;
 @OperationValidation
 public class Operation {
 
-    @MaxAndPositive
+    @MaxAndNotNull
     private int price;
 
     private Info info;

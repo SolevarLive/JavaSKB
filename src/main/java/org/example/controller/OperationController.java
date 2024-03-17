@@ -5,8 +5,9 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Operation;
 import org.example.service.OperationServiceDTO;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+@Validated
 @RestController
 @RequestMapping("/operations")
 @RequiredArgsConstructor

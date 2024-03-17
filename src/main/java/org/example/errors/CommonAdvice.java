@@ -13,8 +13,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class CommonAdvice extends ResponseEntityExceptionHandler {
 
 
-    private final static String VALIDATION_ERROR = "validation_error";
-
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {

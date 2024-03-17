@@ -9,7 +9,7 @@ public class OperationValidator implements ConstraintValidator<OperationValidati
 
     @Override
     public boolean isValid(Operation operation, ConstraintValidatorContext context) {
-        if (operation.getPrice() <= 0) {
+        if (operation.getPrice() < 0) {
             return false;
         }
         return true;

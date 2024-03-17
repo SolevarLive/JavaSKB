@@ -1,8 +1,6 @@
 package org.example.service;
 
 import lombok.Getter;
-import lombok.Setter;
-import org.example.common.Info;
 import org.example.dto.Operation;
 import org.springframework.stereotype.Service;
 

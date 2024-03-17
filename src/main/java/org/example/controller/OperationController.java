@@ -1,6 +1,7 @@
 package org.example.controller;
 
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Operation;
 import org.example.service.OperationServiceDTO;
@@ -15,7 +16,7 @@ public class OperationController {
 
 
     @PostMapping("/opra")
-    public Operation processJson(@RequestBody Operation operation) {
+    public Operation processJson(@Valid @RequestBody Operation operation) {
         operationServiceDTO.operations(operation);
         return  operationServiceDTO.getOperationList().getLast();
     }

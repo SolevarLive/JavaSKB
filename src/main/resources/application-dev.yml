@@ -3,5 +3,5 @@ javalesson:
   comments:
     - "Good"
     - "Norm"
-    - "Don't norm"
+    - "Don't norm dev"
   env: ${ENV_DATA}

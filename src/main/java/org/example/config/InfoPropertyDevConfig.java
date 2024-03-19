@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Profile;
 @Profile("dev")
 public class InfoPropertyDevConfig {
 
-
     @Bean
     public Info info() {
         return new Info();

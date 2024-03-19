@@ -19,9 +19,11 @@ public class Operation {
 
     private Info info;
 
-    public Operation(Operation operation){
+    private String name;
+
+    public Operation(Info info, Operation operation){
         this.price = operation.price;
-        this.info = new Info(operation.info);
+        this.info = info;
     }
 
 }

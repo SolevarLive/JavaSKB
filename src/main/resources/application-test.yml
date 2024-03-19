@@ -1,0 +1,7 @@
+javalesson:
+  appname: "Dota BETA"
+  comments:
+    - "Good"
+    - "Norm"
+    - "Don't norm"
+  env: ${ENV_DATA}

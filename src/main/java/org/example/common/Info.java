@@ -13,9 +13,12 @@ public class Info {
 
     private String date;
 
+    private String comment;
+
 
     public Info(Info info){
         this.id = info.id;
         this.date = info.date;
+        this.comment = info.comment;
     }
 }

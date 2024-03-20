@@ -10,10 +10,4 @@ import lombok.Setter;
 @RequiredArgsConstructor
 public class Data {
 
-    private int id;
-
-    private String date;
-
-    private String comment;
-
 }

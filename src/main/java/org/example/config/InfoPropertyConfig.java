@@ -7,6 +7,7 @@ import org.example.service.info.InfoProdService;
 import org.example.service.info.InfoService;
 import org.example.service.info.InfoServiceApi;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -37,9 +38,10 @@ public class InfoPropertyConfig {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "javalesson", name = "env", havingValue = "default")
+    @ConditionalOnExpression("'${javalesson.env}' != 'default'")
     public InfoServiceApi infoServiceProdApi() {
         return new InfoProdService();
     }
+
 
 }

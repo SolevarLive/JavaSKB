@@ -13,14 +13,12 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @EnableConfigurationProperties(InfoProperties.class)
 public class InfoPropertyConfig {
-
     //создал бин если только "test"
     @Bean
     @Profile("test")
     public String data(){
         return "test";
     }
-
     //создается бин  если создался бин под "test"
     @Bean
     @ConditionalOnBean(String.class)

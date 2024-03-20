@@ -2,7 +2,7 @@ package org.example.service;
 
 import lombok.Getter;
 import org.example.dto.Operation;
-import org.example.service.info.InfoServiceApi;
+import org.example.service.info.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class OperationServiceDTO {
     @Autowired
-    InfoServiceApi infoService;
+    InfoService infoService;
 
     @Getter
     List<Operation> operationList = new CopyOnWriteArrayList<>();

@@ -1,9 +1,7 @@
 package org.example.config;
 import lombok.extern.log4j.Log4j2;
-import org.example.common.Data;
 import org.example.config.property.InfoProperties;
 import org.example.service.info.InfoService;
-import org.example.service.info.InfoServiceApi;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -19,21 +17,21 @@ public class InfoPropertyConfig {
     //создал бин если только "test"
     @Bean
     @Profile("test")
-    public Data data(){
-        return new Data();
+    public String data(){
+        return "test";
     }
 
     //создается бин  если создался бин под "test"
     @Bean
-    @ConditionalOnBean(Data.class)
-    public InfoServiceApi infoServiceApi() {
+    @ConditionalOnBean(String.class)
+    public InfoService infoServiceApi() {
         return new InfoService();
     }
 
     //создается бин если значнеие не 'default'
     @Bean
     @ConditionalOnExpression("'${javalesson.env}' != 'default'")
-    public InfoServiceApi infoServiceProdApi() {
+    public InfoService infoServicedApi() {
         return new InfoService();
     }
 

@@ -3,7 +3,6 @@ package org.example.common;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.example.dto.Operation;
 
 @Getter
 @Setter

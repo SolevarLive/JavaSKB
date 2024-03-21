@@ -1,0 +1,7 @@
+javalesson:
+  appname: "Dota 3"
+  comments:
+    - "Good"
+    - "Norm"
+    - "Don't norm prod"
+  env: ${ENV_DATA:default}

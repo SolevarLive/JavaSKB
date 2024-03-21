@@ -4,4 +4,4 @@ javalesson:
     - "Good"
     - "Norm"
     - "Don't norm prod"
-  env: ${ENV_DATA}
+  env: ${ENV_DATA:default}

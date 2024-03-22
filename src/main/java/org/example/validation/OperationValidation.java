@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Constraint(validatedBy = OperationValidator.class)
 public @interface OperationValidation {
-    String message() default "price less than 0";
+    String message() default "price is less than or equal to 0";
 
     Class<?>[] groups() default {};
 

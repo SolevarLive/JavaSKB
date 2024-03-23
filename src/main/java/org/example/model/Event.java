@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 @Data
-@RequiredArgsConstructor
 @Entity
 @Table(name = "events")
 public class Event {
@@ -20,6 +19,7 @@ public class Event {
     public Event(String string){
         this.name = string;
     }
+    public Event(){}
 
     @Override
     public String toString() {

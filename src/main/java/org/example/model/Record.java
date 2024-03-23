@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 @Data
-@RequiredArgsConstructor
 @Entity
 @Table(name = "records")
 public class Record {
@@ -18,6 +17,7 @@ public class Record {
     private String name;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Event> events;
+    
 }
 
 

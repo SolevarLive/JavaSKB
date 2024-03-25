@@ -2,7 +2,9 @@ package org.example.common;
 
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.example.model.Event;
 import org.example.model.Record;
 
@@ -11,6 +13,8 @@ import java.util.List;
 
 @Data
 @RequiredArgsConstructor
+@Setter
+@Getter
 public class RecordResponce {
     private String name;
     private List<String> events;
@@ -24,4 +28,6 @@ public class RecordResponce {
         }
         this.events = result;
     }
+
+
 }

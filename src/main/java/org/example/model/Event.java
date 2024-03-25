@@ -1,5 +1,6 @@
 package org.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +17,10 @@ public class Event {
 
     private String name;
 
-    public Event(String string){
-        this.name = string;
-    }
-    public Event(){}
+    @JsonIgnore
+    @JoinColumn(name = "record_ID")
+    @ManyToOne
+    private Record record;
 
     @Override
     public String toString() {

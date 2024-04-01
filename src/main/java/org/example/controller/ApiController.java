@@ -4,12 +4,11 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.example.dto.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.security.RolesAllowed;
+import jakarta.annotation.security.RolesAllowed;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,7 +24,7 @@ public class ApiController {
 
 
     @GetMapping(path = "/admin/api")
-   //@RolesAllowed("ROLE_ADMIN")
+    @RolesAllowed("ADMIN")
     public User adminApi() {
         return new User(userDetailsService.loadUserByUsername("admin").getUsername(),
                 userDetailsService.loadUserByUsername("admin").getAuthorities());
@@ -33,7 +32,7 @@ public class ApiController {
 
 
     @GetMapping(path = "/support/api")
-    //@RolesAllowed("ROLE_SUPPORT")
+    @RolesAllowed("SUPPORT")
     public User supportApi() {
         return new User(userDetailsService.loadUserByUsername("support").getUsername(),
                 userDetailsService.loadUserByUsername("support").getAuthorities());

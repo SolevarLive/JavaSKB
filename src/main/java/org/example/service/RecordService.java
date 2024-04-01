@@ -1,7 +1,7 @@
 package org.example.service;
 
 import jakarta.transaction.Transactional;
-import org.example.common.RecordResponce;
+import org.example.common.RecordDTO;
 import org.example.model.Event;
 import org.example.model.Record;
 import org.example.repository.RecordRepository;
@@ -20,16 +20,16 @@ public class RecordService {
         this.recordRepository = recordRepository;
     }
 
-    public List<RecordResponce> getRecords() {
+    public List<RecordDTO> getRecords() {
         List<Record> list = recordRepository.findAll();
-        List<RecordResponce> result = new ArrayList<>();
+        List<RecordDTO> result = new ArrayList<>();
         for (Record i:list){
-            result.add(new RecordResponce(i));
+            result.add(new RecordDTO(i));
         }
         return result;
     }
 
-    public void saveResponce(RecordResponce recordResponce) {
+    public void saveResponce(RecordDTO recordResponce) {
         Record record = new Record();
         record.setName(recordResponce.getName());
 

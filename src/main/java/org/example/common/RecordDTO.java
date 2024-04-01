@@ -15,11 +15,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @Setter
 @Getter
-public class RecordResponce {
+public class RecordDTO {
     private String name;
     private List<String> events;
 
-    public RecordResponce(Record record){
+    public RecordDTO(Record record){
         this.name = record.getName();
         List<Event> list = record.getEvents();
         List<String> result = new ArrayList<>();
